@@ -1,8 +1,8 @@
 <?php
 /**
- * Automatically fill FormFields based on the (live) input of other fields
+ * Automatically fill FormField based on the (live) input of other fields
  *
- * For more info see http://mediawiki.org/wiki/Extension:AssembleFormLink
+ * For more info see http://mediawiki.org/wiki/Extension:AutoFillFormField
  *
  * @file
  * @ingroup Extensions
@@ -22,11 +22,11 @@
 
 $wgExtensionCredits['other'][] = array(
    'path'           => __FILE__,
-   'name'           => 'AutoFillFormFields',
+   'name'           => 'AutoFillFormField',
    'author'         => array('Simon Heimler'),
    'version'        => '0.0.1',
-   'url'            => 'https://www.mediawiki.org/wiki/Extension:AssembleFormLink',
-   'descriptionmsg' => 'AssembleFormLink-desc',
+   'url'            => 'https://www.mediawiki.org/wiki/Extension:AutoFillFormField',
+   'descriptionmsg' => 'AutoFillFormField-desc',
 );
 
 
@@ -34,9 +34,9 @@ $wgExtensionCredits['other'][] = array(
 // RESOURCE LOADER                      //
 //////////////////////////////////////////
 
-$wgResourceModules['ext.AutoFillFormFields'] = array(
+$wgResourceModules['ext.AutoFillFormField'] = array(
    'scripts' => array(
-      'lib/AutoFillFormFields.js',
+      'lib/AutoFillFormField.js',
    ),
    'styles' => array(
 
@@ -46,7 +46,7 @@ $wgResourceModules['ext.AutoFillFormFields'] = array(
    'dependencies' => array(
    ),
    'localBasePath' => __DIR__,
-   'remoteExtPath' => 'AutoFillFormFields',
+   'remoteExtPath' => 'AutoFillFormField',
 );
 
 
