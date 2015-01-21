@@ -14,6 +14,8 @@
 // VARIABLES                            //
 //////////////////////////////////////////
 
+$dir         = dirname( __FILE__ );
+$dirbasename = basename( $dir );
 
 
 //////////////////////////////////////////
@@ -38,15 +40,35 @@ $wgResourceModules['ext.AutoFillFormField'] = array(
    'scripts' => array(
       'lib/AutoFillFormField.js',
    ),
-   'styles' => array(
-
-   )
-   ,'messages' => array(
-   ),
    'dependencies' => array(
+      'ext.semanticforms.main',
    ),
    'localBasePath' => __DIR__,
    'remoteExtPath' => 'AutoFillFormField',
 );
 
 
+
+//////////////////////////////////////////
+// LOAD FILES                           //
+//////////////////////////////////////////
+
+// Register hooks
+$wgHooks['BeforePageDisplay'][] = 'autoFillFormFieldOnBeforePageDisplay';
+
+
+
+//////////////////////////////////////////
+// HOOK CALLBACKS                       //
+//////////////////////////////////////////
+
+/**
+* Add plastic.js library to all pages
+*/
+function autoFillFormFieldOnBeforePageDisplay(OutputPage &$out, Skin &$skin) {
+
+  // Add as ResourceLoader Module
+  $out->addModules('ext.AutoFillFormField');
+
+  return true;
+}
