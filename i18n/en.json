@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fannon"
+		]
+	},
+	"autofillformfield-desc": "Allows to automatically fill form input fields based on the input of other fields"
+}
