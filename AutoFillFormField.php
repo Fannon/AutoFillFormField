@@ -1,6 +1,8 @@
 <?php
 /**
- * Automatically fill FormField based on the (live) input of other fields
+ * Automatically fill a SemanticForms input field based on the (live) input of other fields
+ *
+ * For more info see http://mediawiki.org/wiki/Extension:AutoFillFormField
  *
  * @file
  * @ingroup Extensions
@@ -10,7 +12,7 @@
  * @links https://www.mediawiki.org/wiki/Extension_talk:AutoFillFormField Support
  * @links https://github.com/Fannon/AutoFillFormField/issues Bug tracker
  * @links https://github.com/Fannon/AutoFillFormField Source code
- * 
+ *
  * @author Simon Heimler (Fannon), 2014
  * @license http://opensource.org/licenses/mit-license.php The MIT License (MIT)
  */
@@ -52,6 +54,7 @@ $wgResourceModules['ext.AutoFillFormField'] = array(
    'localBasePath' => __DIR__,
    'remoteExtPath' => 'AutoFillFormField',
 );
+
 
 
 //////////////////////////////////////////
