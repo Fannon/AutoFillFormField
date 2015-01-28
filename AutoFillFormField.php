@@ -2,12 +2,17 @@
 /**
  * Automatically fill FormField based on the (live) input of other fields
  *
- * For more info see http://mediawiki.org/wiki/Extension:AutoFillFormField
- *
  * @file
  * @ingroup Extensions
- * @author Simon Heimler, 2014
- * @license GNU General Public Licence 2.0 or later
+ * @package MediaWiki
+ *
+ * @links https://github.com/Fannon/AutoFillFormField/blob/master/README.md Documentation
+ * @links https://www.mediawiki.org/wiki/Extension_talk:AutoFillFormField Support
+ * @links https://github.com/Fannon/AutoFillFormField/issues Bug tracker
+ * @links https://github.com/Fannon/AutoFillFormField Source code
+ * 
+ * @author Simon Heimler (Fannon), 2014
+ * @license http://opensource.org/licenses/mit-license.php The MIT License (MIT)
  */
 
 //////////////////////////////////////////
@@ -25,10 +30,11 @@ $dirbasename = basename( $dir );
 $wgExtensionCredits['other'][] = array(
    'path'           => __FILE__,
    'name'           => 'AutoFillFormField',
-   'author'         => array('Simon Heimler'),
-   'version'        => '0.0.1',
+   'author'         => array( 'Simon Heimler' ),
+   'version'        => '0.1.0',
    'url'            => 'https://www.mediawiki.org/wiki/Extension:AutoFillFormField',
-   'descriptionmsg' => 'AutoFillFormField-desc',
+   'descriptionmsg' => 'autofillformfield-desc',
+   'license-name'   => 'MIT'
 );
 
 
@@ -48,7 +54,6 @@ $wgResourceModules['ext.AutoFillFormField'] = array(
 );
 
 
-
 //////////////////////////////////////////
 // LOAD FILES                           //
 //////////////////////////////////////////
@@ -56,6 +61,9 @@ $wgResourceModules['ext.AutoFillFormField'] = array(
 // Register hooks
 $wgHooks['BeforePageDisplay'][] = 'autoFillFormFieldOnBeforePageDisplay';
 
+// Register extension messages
+$wgMessagesDirs['AutoFillFormField'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['AutoFillFormField'] = __DIR__ . '/AutoFillFormField.i18n.php';
 
 
 //////////////////////////////////////////
