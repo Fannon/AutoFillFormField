@@ -13,7 +13,7 @@
  * @links https://github.com/Fannon/AutoFillFormField/issues Bug tracker
  * @links https://github.com/Fannon/AutoFillFormField Source code
  *
- * @author Simon Heimler (Fannon), 2014
+ * @author Simon Heimler (Fannon), 2015
  * @license http://opensource.org/licenses/mit-license.php The MIT License (MIT)
  */
 
